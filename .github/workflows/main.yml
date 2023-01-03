@@ -6,6 +6,7 @@ on:
 
 jobs:
   merge-dependabot:
+    permissions: write-all
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'dependabot[bot]' && github.event_name == 'pull_request'}} # Detect that the PR author is dependabot
     steps:
